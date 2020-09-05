@@ -14,7 +14,7 @@ bool cmp(Node a, Node b) {
 	if (a.flag == false || b.flag == false) {
 		return a.flag > b.flag;
 	} else {
-		return a.data > b.data;
+		return a.data < b.data;
 	}
 }
 
