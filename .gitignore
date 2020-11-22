@@ -33,6 +33,6 @@
 main
 
 
-
+.DS_Store
 # debug
 main.dSYM
