@@ -1,4 +1,4 @@
-#include <cstdio>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;
@@ -22,6 +22,7 @@ int main() {
 	for (int i = 0; i < maxn; i++) {
 		node[i].flag = false;
 	}
+
 	int n, begin, address;
 	scanf("%d%d", &n, &begin);
 	for (int i = 0; i < n; i++) {
@@ -29,7 +30,6 @@ int main() {
 		scanf("%d%d", &node[address].data, &node[address].next);
 		node[address].address = address;
 	}
-
 	int count = 0, p = begin;
 
 	while (p != -1) {
@@ -40,9 +40,7 @@ int main() {
 	if (count == 0) {
 		printf("0 -1");
 	} else {
-		//
 		sort(node, node + maxn, cmp);
-
 
 		printf("%d %05d\n", count, node[0].address);
 		for (int i = 0; i < count; i++) {
@@ -56,3 +54,4 @@ int main() {
 
 	return 0;
 }
+
